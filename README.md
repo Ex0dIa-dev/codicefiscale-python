@@ -7,7 +7,7 @@
 ```python
 import codicefiscale
 
-cf = codicefiscale.GeneraCodiceFiscale(cognome, nome, data, sesso, citta)
+cf = codicefiscale.CalcolaCodiceFiscale(cognome, nome, data, sesso, citta)
 ```
 
 **Esempio:**
@@ -15,14 +15,14 @@ cf = codicefiscale.GeneraCodiceFiscale(cognome, nome, data, sesso, citta)
 ```python
 import codicefiscale
 
-cf = codicefiscale.GeneraCodiceFiscale("Rossi", "Mario", "15/06/1998", "M", "Roma")
+cf = codicefiscale.CalcolaCodiceFiscale("Rossi", "Mario", "15/06/1998", "M", "Roma")
 ```
 
 *******
 
 **Funzioni:**
 
-- **GeneraCodiceFiscale**(cognome, nome, data, sesso, citta) ---> Ritorna un codice fiscale completo
+- **CalcolaCodiceFiscale**(cognome, nome, data, sesso, citta) ---> Ritorna un codice fiscale completo
 - **GetSurname**(cognome) ---> Ritorna le tre lettere del cognome che compongono il codice fiscale
 - **GetName**(nome) ---> Ritorna le tre lettere del nome che compongono il codice fiscale
 - **GetBirthday**(data, sesso) ---> Ritorna una tupla contenente i caratteri dell'anno di nascita, del mese di nascita, e della composizione *giorno di nascita + sesso*
