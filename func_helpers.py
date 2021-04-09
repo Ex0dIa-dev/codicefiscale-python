@@ -1,31 +1,16 @@
 #module for string manipulation
 import datetime
 
+#return a list of vowals, and the total of vowals
 def get_vocals(s):
-    vocals = ['a', 'e', 'i', 'o', 'u']
-    n = 0
-    finded_vocals = []
 
-    for ch in s.lower():
-        if ch in vocals:
-            n = n+1
-            finded_vocals.append(ch)
-    
-    return finded_vocals, n
+    return [v for v in s.lower() if v in "aeiou"], sum([1 for v in s.lower() if v in "aeiou"])
 
+#return a list of cons, and the total of cons
 def get_cons(s):
-    vocals = ['a', 'e', 'i', 'o', 'u']
-    n = 0
-    finded_cons = []
 
-    for ch in s.lower():
-        if ch not in vocals:
-            n = n+1
-            finded_cons.append(ch)
+    return [c for c in s.lower() if c not in "aeiou"], sum([1 for c in s.lower() if c not in "aeiou"])
     
-    return finded_cons, n
-
-
 def validate_date(d):
     
     try:
